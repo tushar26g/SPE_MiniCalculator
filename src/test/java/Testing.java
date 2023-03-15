@@ -3,7 +3,7 @@ import static org.junit.Assert.*;
 
 import org.example.Calculator;
 import org.junit.Test;
-public class testing {
+public class Testing {
     private static final double DELTA = 1e-15;
     Calculator calculator = new Calculator();
     @Test
