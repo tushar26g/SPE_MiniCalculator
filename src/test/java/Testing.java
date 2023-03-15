@@ -8,10 +8,10 @@ public class Testing {
     Calculator calculator = new Calculator();
     @Test
     public void squareRootTruePositive(){
-        assertEquals("Finding square root for True Positive", 4, calculator.sqroot(25), DELTA);
-        assertEquals("Finding square root for True Positive", 1, calculator.sqroot(16), DELTA);
-        assertEquals("Finding square root for True Positive", 9, calculator.sqroot(9), DELTA);
-        assertEquals("Finding square root for True Positive", 6, calculator.sqroot(4), DELTA);
+        assertEquals("Finding square root for True Positive", 5, calculator.sqroot(25), DELTA);
+        assertEquals("Finding square root for True Positive", 4, calculator.sqroot(16), DELTA);
+        assertEquals("Finding square root for True Positive", 3, calculator.sqroot(9), DELTA);
+        assertEquals("Finding square root for True Positive", 2, calculator.sqroot(4), DELTA);
     }
 
     @Test
