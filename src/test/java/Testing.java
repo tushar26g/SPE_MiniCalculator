@@ -38,6 +38,17 @@ public class Testing {
         assertNotEquals("Finding square root for False Positive", 3, calculator.sqroot(4), DELTA);
         assertNotEquals("Finding square root for False Positive", 4, calculator.sqroot(81), DELTA);
         assertNotEquals("Finding square root for False Positive", 2, calculator.sqroot(36), DELTA);
+    }
 
+    @Test
+    public void powerTruePositive(){
+        assertEquals("Finding power for True Positive", 8, calculator.power(2, 3), DELTA);
+        assertEquals("Finding power for True Positive", 64, calculator.power(4, 3), DELTA);
+    }
+
+    @Test
+    public void powerFalsePositive(){
+        assertNotEquals("Finding power for False Positive", 6, calculator.power(2, 2), DELTA);
+        assertNotEquals("Finding power for False Positive", -7.3, calculator.power(2, 3), DELTA);
     }
 }

@@ -13,7 +13,7 @@ public class Calculator {
         double number1, number2;
         do {
             System.out.println("Calculator-DevOps, Choose to perform operation");
-            System.out.print("1. Factorial\n2. Square root\nEnter your choice: ");
+            System.out.print("1. Factorial\n2. Square root\nPress 3 to find power\nEnter your choice: ");
             int choice;
             try {
                 choice = scanner.nextInt();
@@ -28,7 +28,6 @@ public class Calculator {
                     number1 = scanner.nextDouble();
                     System.out.println("Factorial of "+number1+" is : " + calculator.factorial(number1));
                     System.out.println("\n");
-
                     break;
                 case 2:
                     // do factorial
@@ -37,6 +36,17 @@ public class Calculator {
                     System.out.println("Square root of "+number1+" is : " + calculator.sqroot(number1));
                     System.out.println("\n");
                     break;
+
+                case 3:
+                    // find power
+                    System.out.print("Enter the first number : ");
+                    number1 = scanner.nextDouble();
+                    System.out.print("Enter the second number : ");
+                    number2 = scanner.nextDouble();
+                    System.out.println(number1+ " raised to power "+number2+" is : " + calculator.power(number1, number2));
+                    System.out.println("\n");
+                    break;
+
                 default:
                     System.out.println("Exiting....");
                     return;
@@ -57,6 +67,11 @@ public class Calculator {
 
     public double sqroot(double number1) {
         double result = Math.sqrt(number1);
+        return result;
+    }
+
+    public double power(double number1, double number2) {
+        double result = Math.pow(number1,number2);
         return result;
     }
 }
