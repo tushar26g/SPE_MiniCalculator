@@ -47,6 +47,14 @@ public class Calculator {
                     System.out.println("\n");
                     break;
 
+                case 4:
+                    // find natural log
+                    System.out.print("Enter a number : ");
+                    number1 = scanner.nextDouble();
+                    System.out.println("Natural log of "+number1+" is : " + calculator.naturalLog(number1));
+                    System.out.println("\n");
+
+                    break;
                 default:
                     System.out.println("Exiting....");
                     return;
@@ -72,6 +80,23 @@ public class Calculator {
 
     public double power(double number1, double number2) {
         double result = Math.pow(number1,number2);
+        return result;
+    }
+
+    public double naturalLog(double number1) {
+        double result = 0;
+        try {
+
+            if (number1 <0 ) {
+                result = Double.NaN;
+                throw new ArithmeticException("Case of NaN 0.0/0.0");
+            }
+            else {
+                result = Math.log(number1);
+            }
+        } catch (ArithmeticException error) {
+            System.out.println("[EXCEPTION - LOG] - Cannot find log of negative numbers " + error.getLocalizedMessage());
+        }
         return result;
     }
 }
