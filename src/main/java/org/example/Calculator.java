@@ -1,5 +1,8 @@
 package org.example;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -7,6 +10,7 @@ import java.util.Scanner;
 
 public class Calculator {
 
+    private static final Logger logger = LogManager.getLogger(Calculator.class);
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
@@ -62,7 +66,9 @@ public class Calculator {
         } while (true);
     }
     public double factorial(double number1) {
+        logger.info("[FACTORIAL] - " + number1);
         double result = fact(number1);
+        logger.info("[RESULT - FACTORIAL] - " + result);
         return result;
     }
 
