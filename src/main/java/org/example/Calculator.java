@@ -17,7 +17,7 @@ public class Calculator {
         double number1, number2;
         do {
             System.out.println("Calculator-DevOps, Choose to perform operation");
-            System.out.print("1. Factorial\n2. Square root\nPress 3 to find power\nEnter your choice: ");
+            System.out.print("1. Factorial\n2. Square root\n3. find power\n4. Natural Logarithm\n5. Exit \nEnter your choice: ");
             int choice;
             try {
                 choice = scanner.nextInt();
@@ -59,9 +59,14 @@ public class Calculator {
                     System.out.println("\n");
 
                     break;
-                default:
+
+                case 5:
                     System.out.println("Exiting....");
                     return;
+
+                default:
+                    System.out.println("Wrong choice");
+                    break;
             }
         } while (true);
     }
